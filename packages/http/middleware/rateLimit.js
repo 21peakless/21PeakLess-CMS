@@ -1,5 +1,6 @@
 // This middleware requires a redis store
 const RateLimit = require('express-rate-limit');
+const Client = require('../Client');
 
 // Default values
 const DEFAULT_THROTTLE_INTERVAL = 60 * 60 * 100; // 1 hour
@@ -14,27 +15,20 @@ const DEFAULT_THROTTLE_LIMITER = 280800; // 280800 calls per hour
 exports = module.exports = (options = {}) => {
     const windowMs = options.interval || DEFAULT_THROTTLE_INTERVAL;
     const max = options.limit || DEFAULT_THROTTLE_LIMITER;
+    const enableHeaders = typeof options.headers !== 'undefined' ? options.headers : true;
 
     return new RateLimit({
         max,
         windowMs,
         delayMs: 0,
         statusCode: 429,
-        handler: function(req, res /*next*/) {
-            if (options.headers) {
+        handler: function(req, res, next) {
+            if (enableHeaders) {
                 res.setHeader('X-21PeakLess-Rate-Limit-Retry-After', Math.ceil(timing / 1000));
             }
 
-            res.status(options.statusCode);
-
-            res.format({
-                html: function() {
-                    res.status(options.statusCode).end(options.message);
-                },
-                json: function() {
-                    res.status(options.statusCode).json({ message: options.message });
-                },
-            });
+            const Connection = new Client(req, res, next);
+            Connection.error(429, 'Request limit reached', {});
         },
     });
 };

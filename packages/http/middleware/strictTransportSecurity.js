@@ -11,9 +11,9 @@ const DEFAULT_MAX_AGE = 180 * 24 * 60 * 60;
 exports = module.exports = function hsts(options) {
     options = options || {};
 
-    var maxAge = options.maxAge != null ? options.maxAge : DEFAULT_MAX_AGE;
-    var includeSubDomains = options.includeSubDomains !== false && options.includeSubdomains !== false;
-    var setIf = options.hasOwnProperty('setIf') ? options.setIf : () => true;
+    const maxAge = options.maxAge != null ? options.maxAge : DEFAULT_MAX_AGE;
+    const includeSubDomains = options.includeSubDomains !== false && options.includeSubdomains !== false;
+    const setIf = options.hasOwnProperty('setIf') ? options.setIf : () => true;
 
     if (options.hasOwnProperty('maxage')) {
         throw new Error('maxage is not a supported property. Did you mean to pass "maxAge" instead of "maxage"?');
@@ -39,14 +39,14 @@ exports = module.exports = function hsts(options) {
         throw new Error('includeSubDomains and includeSubdomains cannot both be specified.');
     }
 
-    var header = 'max-age=' + Math.round(maxAge);
+    let header = `max-age=${Math.round(maxAge)}`;
 
     if (includeSubDomains) {
-        header += '; includeSubDomains';
+        header = `${header}; includeSubDomains`;
     }
 
     if (options.preload) {
-        header += '; preload';
+        header = `${header}; preload`;
     }
 
     return function hsts(req, res, next) {
