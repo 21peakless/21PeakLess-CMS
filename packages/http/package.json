@@ -1,5 +1,5 @@
 {
-    "name": "@21peakless/config",
+    "name": "@21peakless/http",
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
@@ -9,6 +9,6 @@
     "author": "Jan Biasi <biasijan@gmail.com>",
     "license": "BSD-3-Clause",
     "dependencies": {
-        "rc": "^1.2.1"
+        "express-rate-limit": "^2.9.0"
     }
 }

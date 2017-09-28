@@ -11,7 +11,8 @@
         "type": "git",
         "url": "git+https://github.com/21peakless/cms.git"
     },
-    "author": "",
+    "author": "21PeakLess Inc.",
+    "contributors": ["Jan Biasi <biasijan@gmail.com>", "Fabio Litscher", "Fabio Eichmann", "Simon Styger"],
     "license": "BSD-3-Clause",
     "bugs": {
         "url": "https://github.com/21peakless/cms/issues"
