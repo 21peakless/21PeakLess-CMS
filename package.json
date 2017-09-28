@@ -12,7 +12,12 @@
         "url": "git+https://github.com/21peakless/cms.git"
     },
     "author": "21PeakLess Inc.",
-    "contributors": ["Jan Biasi <biasijan@gmail.com>", "Fabio Litscher", "Fabio Eichmann", "Simon Styger"],
+    "contributors": [
+        "Jan Biasi <biasijan@gmail.com>",
+        "Fabio Litscher",
+        "Fabio Eichmann",
+        "Simon Styger"
+    ],
     "license": "BSD-3-Clause",
     "bugs": {
         "url": "https://github.com/21peakless/cms/issues"
@@ -22,5 +27,9 @@
         "commitizen": "^2.9.6",
         "cz-conventional-changelog": "^2.0.0",
         "lerna": "^2.0.0"
+    },
+    "dependencies": {
+        "morgan": "^1.9.0",
+        "winston": "^2.3.1"
     }
 }
