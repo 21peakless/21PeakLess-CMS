@@ -1,0 +1,14 @@
+{
+  "name": "@21peakless/config",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "rc": "^1.2.1"
+  }
+}
