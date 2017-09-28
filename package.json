@@ -1,0 +1,25 @@
+{
+    "name": "@21peakless/cms",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "lerna run test",
+        "commit": "./node_modules/.bin/git-cz"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/21peakless/cms.git"
+    },
+    "author": "",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/21peakless/cms/issues"
+    },
+    "homepage": "https://github.com/21peakless/cms#readme",
+    "devDependencies": {
+        "commitizen": "^2.9.6",
+        "cz-conventional-changelog": "^2.0.0",
+        "lerna": "^2.0.0"
+    }
+}
