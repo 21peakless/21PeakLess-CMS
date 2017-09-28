@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "8"
+matrix:
+  fast_finish: true
+env:
+  - NODE_ENV=ci
+cache:
+  directories:
+    - "node_modules"
+before_install:
+  - "npm config set spin false"
