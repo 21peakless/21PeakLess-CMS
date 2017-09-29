@@ -18,8 +18,10 @@ This module manages all custom configurations which can be done to the CMS serve
         port: 9671,
     },
     database: {
-        adapter: 'mongodb',
         port: 27017,
+        host: 'localhost',
+        adapter: 'mongodb',
+        select: 'peaklesscms',
         auth: {
             enabled: false,
             user: 'admin',

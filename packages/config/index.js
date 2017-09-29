@@ -8,7 +8,9 @@ exports = module.exports = rc('21peakless', {
         port: 9671,
     },
     database: {
+        host: 'localhost',
         adapter: 'mongodb',
+        select: '21peaklesscms'
         port: 27017,
         auth: {
             enabled: false,
