@@ -1,4 +1,4 @@
-export default class HTTPClient {
+class HTTPClient {
     constructor(req, res, next) {
         this._res = res;
         this._req = req;
@@ -31,3 +31,5 @@ export default class HTTPClient {
         });
     }
 }
+
+exports = module.exports = Client;
