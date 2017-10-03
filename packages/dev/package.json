@@ -1,0 +1,19 @@
+{
+    "name": "@21peakless/dev",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "exit 0",
+        "dev:start": "node index.js"
+    },
+    "dependencies": {
+        "@21peakless/server": "0.0.1",
+        "@21peakless/http": "0.0.1",
+        "@21peakless/config": "0.0.1",
+        "@21peakless/logger": "0.0.1"
+    },
+    "author": "",
+    "license": "BSD-3-Clause"
+}

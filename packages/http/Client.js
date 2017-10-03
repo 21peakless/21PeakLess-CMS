@@ -32,4 +32,4 @@ class HTTPClient {
     }
 }
 
-exports = module.exports = Client;
+exports = module.exports = HTTPClient;
