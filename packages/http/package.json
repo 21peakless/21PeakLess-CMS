@@ -10,5 +10,8 @@
     "license": "BSD-3-Clause",
     "dependencies": {
         "express-rate-limit": "^2.9.0"
+    },
+    "devDependencies": {
+        "jest": "^21.2.1"
     }
 }
