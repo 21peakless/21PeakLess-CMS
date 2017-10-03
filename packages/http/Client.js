@@ -17,11 +17,11 @@ class HTTPClient {
         this._bypass.call();
     }
 
-    success(data) {
+    success(data = {}) {
         this._res.status(200).json(data);
     }
 
-    fail(code, message, additions) {
+    fail(code = 500, message = 'Internal server error', additions = {}) {
         this._res.status(code).json({
             error: {
                 code,

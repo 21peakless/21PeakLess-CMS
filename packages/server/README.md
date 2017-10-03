@@ -7,6 +7,7 @@ Main node.js server implementation, used for the CMS and CDN API as base host. S
 const { join } = require('path');
 const createServer = require('@21peakless/server');
 const { middleware } = require('@21peakless/http');
+const { clickJackingProtection, noCache, xssProtection } = middleware;
 
 const app = createServer({
     proxy: '192.221.19.2',
